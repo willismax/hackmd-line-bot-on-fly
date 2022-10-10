@@ -24,7 +24,7 @@ line_bot_api.push_message(LINE_USER_ID, TextSendMessage(text='你可以開始了
 
 
 
-# 監聽所有來自 /callback 的 Post Request
+# Listen for all Post Requests from /callback
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
