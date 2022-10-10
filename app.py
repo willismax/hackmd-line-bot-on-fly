@@ -22,8 +22,6 @@ handler = WebhookHandler(CHANNEL_SECRET)
 line_bot_api.push_message(LINE_USER_ID, TextSendMessage(text='你可以開始了'))
 
 
-
-
 # Listen for all Post Requests from /callback
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -42,8 +40,6 @@ def callback():
 
     return 'OK'
 
-#訊息傳遞區塊
-##### 基本上程式編輯都在這個function #####
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     word =  str(event.message.text)
