@@ -55,7 +55,7 @@ def handle_message(event):
 
     if event.message.type=='text':
         word =  str(event.message.text)
-        if word[:3] == "@靈感":
+        if word[:3] == "@fletting":
             content = hb.creat_fletting_note(word[3:])
             message = TextSendMessage(text=content)
             line_bot_api.reply_message(event.reply_token, message)
